@@ -15,8 +15,35 @@
         font-weight: 400;
       }
       body {
+        font-family: sans-serif;
         color: #d5d5d5;
-        background: #1f1f1f;
+        background: #1b262c;
+        height: 100vh;
+      }
+      nav {
+        background-color: #000;
+      }
+      main {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .section-hero {
+        width: 65%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        background-color: #000;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px 20px #1b262c;
+      }
+      .section-image {
+        width: 50%;
+        margin: 10px 30px;
+      }
+      .section-image img {
+        width: 100%;
       }
       a {
         text-decoration: none;
@@ -24,26 +51,145 @@
         color: #b9345a;
         font-size: 20px;
       }
+      h3 {
+        padding: 4px;
+        margin-bottom: 3px;
+        font-size: 1.8em;
+        color: #26a5ff;
+        background-color: rgb(29, 30, 31);
+        font-weight: 500;
+      }
       span {
         color: #5da3fa;
       }
-      .content {
-        text-align: justify;
-        width: 750px;
-        margin: 10px 0;
+      .section__hero-text {
+        padding: 10px;
       }
+      .content {
+        padding: 10px;
+      }
+      footer.footer {
+        background: #141414d7;
+        display: flex;
+        height: 40vh;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .address,
+      ul {
+        flex-basis: 20%;
+      }
+
       ul {
         list-style-type: none;
-        display: flex;
-        justify-content: space-around;
       }
-      li a {
+      li > a {
+        font-size: 15px;
+        color: #fff;
         text-transform: uppercase;
       }
+      fieldset {
+        border-width: 2px;
+        border-style: double;
+        border-color: rgb(55, 65, 81);
+        border-radius: 0.5rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 20px;
+        margin-top: 0px;
+      }
+
+      legend {
+        font-size: 1.3em;
+        font-weight: 500;
+        float: none;
+        width: auto;
+        color: #26a5ff;
+        margin-bottom: 0px;
+      }
+      .addSection {
+        width: 30%;
+        margin-top: 30px;
+        margin-right: 13px;
+      }
+
+      .adds {
+        margin-bottom: 60px;
+      }
+
+      .addHeading {
+        font-size: 16pt;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .add {
+        background-color: #131417;
+        height: 100px;
+        margin-top: 25px;
+        display: flex;
+      }
+
+      .add img {
+        margin: 0px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .add span {
+        font-size: 14pt;
+        font-weight: 600;
+        padding: 10px;
+      }
+
+      .addText div {
+        color: white;
+        font-size: 14pt;
+        font-weight: 600;
+        /* padding: 10px; */
+        margin-top: 25px;
+      }
+
+      .lastAdd {
+        position: sticky;
+        top: 25px;
+      }
+
       @media (max-width: 500px) {
+        main {
+          width: 100%;
+          margin: 90px auto 0;
+          flex-direction: column;
+        }
         .content {
           width: 100%;
           padding: 5px;
+        }
+        .section-hero {
+          width: 90%;
+          margin: 12px 15px;
+        }
+        .section-image {
+          max-width: 60%;
+          margin: 0 auto;
+        }
+        .addSection {
+          width: 90%;
+          margin: 12px;
+        }
+      }
+      @media (min-width: 450px) and (max-width: 900px) {
+        h3.h3-1 {
+          font-size: 1.3rem;
+        }
+        .section-hero {
+          max-width: 90%;
+        }
+        .section-image {
+          max-width: 80%;
+          margin: 0 auto;
         }
       }
       @media (max-width: 450px) {
@@ -56,7 +202,7 @@
     <title>TechSnap-IDE</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-md">
         <a class="navbar-brand" href="#">TECH SNAP</a>
         <button
@@ -81,385 +227,425 @@
       </div>
     </nav>
     <main>
-      <div class="section-hero container d-flex">
-        <img
-          src="./ide.jpg"
-          class="img-fluid align-self-center"
-          width="750px"
-          height="450px"
-          alt="ide-image"
-        />
-      </div>
-      <div class="section-content">
-        <div class="container">
-          <div class="content content-1 row">
-            <div class="col-sm-12">
-              <h3>1. Microsoft Visual Studio</h3>
-              <p>
-                <a href="https://visualstudio.microsoft.com/"
-                  >Microsoft Visual Studio</a
-                >
-                is an IDE from Microsoft which is used to develop computer
-                programs, websites, web services, and mobile apps. It is the
-                premium IDE coming at an enterprise pricing of $2999 annually.
-                It comes with tons of tools for compatibility testing so you
-                could test on numerous devices and applications.
-              </p>
-              <p>
-                <span>Languages Supported</span>: ASP.NET, DHTML, JavaScript,
-                JScript, Visual Basic, Visual C#, Visual C++, Visual F#, XAML
-                and more.
-              </p>
-              <p>
-                <span>Some key features</span>: Automation tools Fast and smart
-                code editing Easy and efficient project management Rapid user
-                interface development Support for multiple languages
-                Cross-platform Support Split screen Support Insights for
-                monitoring performance in real time Easy refactoring and code
-                snippet insertion VCS support
-              </p>
-              <p>
-                <span>Drawbacks</span>: Because the Visual Studio is a
-                heavyweight IDE, it takes considerable resources to open and
-                run, so making simple edits may be time-consuming on some
-                devices. For the simpler task, it may be easier to use a
-                lightweight editor
-              </p>
+      <div class="section-hero">
+        <div class="section-image content">
+          <img src="./ide.jpg" alt="ide-image" />
+        </div>
+        <div class="section__hero-text">
+          <h3 class="h3-1">Integrated Development Environment(IDE) :</h3>
+          <p>
+            An Integrated Development Environment is a application that provides
+            support to develop software applications. IDE is one of the foremost
+            components of a coder's/developer's life as it integrates all the
+            developer tools into a single graphical user interface(GUI).
+          </p>
+          <p>
+            An IDE usually includes source code editor, build automation tools
+            and a debugger, apparently it is not limited only to them. The
+            compiler translates the source code/program most probably into
+            computer language i.e Binary language which is compatible for a
+            computer to execute.
+          </p>
+          <p>So let's dive into some popular IDE's across the World.</p>
+        </div>
+        <div class="section-content">
+          <div class="">
+            <div class="">
+              <div class="content">
+                <h3>1. Microsoft Visual Studio</h3>
+                <p>
+                  <a href="https://visualstudio.microsoft.com/"
+                    >Microsoft Visual Studio</a
+                  >
+                  Integrated Development Environment that works with all major
+                  Programming languages like C sharp, Python and java versions.
+                  It is maintained by MicrosoftCorporation and this IDE is
+                  loaded with rich feactures and Functionalities that one can
+                  possibly imagine.It is actively used to develop Computer
+                  programs,Websites,Desktop Applications,Mobile
+                  Applications,Games and much more.It supports many programming
+                  languages that allows the code editor and compiler to execute
+                  them.
+                </p>
+                <p>
+                  <span>Languages Supported</span>: C, C++, C char, Java,
+                  JavaScript and many more
+                </p>
+                <p>
+                  <span>Some key features</span>: Code editor Debugger, Designer
+                  Extensibility Professional Syntax Highlighting Intelligent
+                  code completion
+                </p>
+                <p>
+                  <span>Drawbacks</span>: It is much longer loading,
+                  auto-saving, automatic local history, continuing instability
+                  with the IDE.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-2 row">
-            <div class="col-sm-12">
-              <h3>2. NETBEANS</h3>
-              <p>
-                <a href="https://netbeans.apache.org/">NetBeans</a> IDE lets you
-                quickly and easily develop Java desktop, mobile, and web
-                applications, as well as HTML5 applications with HTML,
-                JavaScript, and CSS. The IDE also provides a great set of tools
-                for PHP and C/C++ developers. It is a free and open source and
-                has a large community of users and developers around the world.
-                NetBeans IDE is the official IDE for Java 8. With its editors,
-                code analyzers, and converters, you can quickly and smoothly
-                upgrade your applications to use new Java 8 language constructs,
-                such as lambdas, functional operations, and method references.
-              </p>
-              <p>
-                <span>Languages Supported</span>: Java, HTML, HTML 5, C, C++
-                PHP, and many more
-              </p>
-              <p>
-                <span>Some key features</span>: Best Support for latest Java
-                technologies Fast and smart code editing Easy and efficient
-                project management Rapid user interface development Support for
-                multiple languages Cross-platform Support Rich set of community
-                provided plugins
-              </p>
-              <p>
-                <span>Drawbacks</span>: This free IDE consumes a lot of memory,
-                so it may perform sluggishly on some machines.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>2. NETBEANS</h3>
+                <p>
+                  <a href="https://netbeans.apache.org/">NetBeans</a> is
+                  recommended IDE by Java.It is a open source IDE that allows
+                  for optimal funtionality and version control out of box,
+                  written in Java. It is developed by Apache Software, Oracle
+                  Corporation. It can also be used in php, C, C++, HTML,
+                  JavaScript etc. It simpliflies the development of web and
+                  mobile applications. It provides smart overviews to help you
+                  understand and manage your applications.
+                </p>
+                <p>
+                  <span>Languages Supported</span>: Java, HTML, HTML 5, C, C++
+                  PHP, and many more
+                </p>
+                <p>
+                  <span>Some key features</span>: cross-platform support Fast &
+                  Smart Editing GUI Builder Easy and Efficient Project
+                  Management Smart Error Analyzer
+                </p>
+                <p>
+                  <span>Drawbacks</span>: This free IDE consumes a lot of
+                  memory, so it may perform in-active on some devices.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-3 row">
-            <div class="col-sm-12">
-              <h3>3. INTELLIJ IDEA</h3>
-              <p>
-                <a href="https://www.jetbrains.com/idea/"
-                  >IntelliJ Idea (click here)</a
-                >
-                is an IDE developed by Jet Brains. This IDE offers users a free
-                Community Edition, 30-day free trial for the Ultimate Edition,
-                and costs $533 â?? $693 annually depending on features. IntelliJ
-                IDEA, which supports Java 8 and Java EE 7, comes with extensive
-                tools to develop mobile apps and enterprise technologies for
-                different platforms. When it comes to cost, IntelliJ is a real
-                deal due to the massive of list of features you
-              </p>
-              get.
-              <p>
-                <span>Languages supported</span>: AngularJS, CoffeeScript, CS,
-                HTML, JavaScript, LESS, Node JS, PHP, Python, Ruby, Sass,
-                TypeScript and more.
-              </p>
-              <p>
-                <span>Some key features</span>: Best Support for latest Java
-                technologies Smart code completion Framework-specific assistance
-                Productivity Boosters Developer ergonomics Git integration
-                Supports Google App engine, Grails, Java EE, Play Spring, Struts
-                and many more Cross-platform Support Rich set of community
-                provided Plugins
-              </p>
-              <p>
-                <span>Drawbacks</span>: This IDE comes with a learning curve, so
-                it may not the best for beginners. There are many shortcuts to
-                remember, and some users complain about the clunky UI.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>3. INTELLIJ IDEA</h3>
+                <p>
+                  <a href="https://www.jetbrains.com/idea/"
+                    >IntelliJ Idea (click here)</a
+                  >
+                  is an IDE developed by Jet Brains. It is written in Java for
+                  developing software and projects. You should install JDK
+                  because IntelliJ is purely Java-based and is quite heavier
+                  than other IDEs.In this IDE you will find many modules,It can
+                  run on various operating systems like Windows, macOS, Linux,
+                  and many more.
+                </p>
+                <p>
+                  <span>Languages supported</span>: Java,AngularJS,
+                  CoffeeScript, CS, HTML, JavaScript, LESS, Node JS, PHP,
+                  Python, Ruby, Sass, TypeScript and more.
+                </p>
+                <p>
+                  <span>Some key features</span>: Smart Code Completion Analyses
+                  the data flow Navigate to duplicates Quick fixes version
+                  control
+                </p>
+                <p>
+                  <span>Drawbacks</span>: It has a lot of plugins that
+                  automatically on. Ultimate Edition is the full version and
+                  quite expensive.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-4 row">
-            <div class="col-sm-12">
-              <h3>4. ECLIPSE</h3>
-              <p>
-                <a href="https://www.eclipse.org/ide/">Eclipse</a> is a free to
-                use open source editor useful for beginners and pros too.
-                Originally was a Java environment but as of now, it has a wide
-                range of capabilities thanks to a large number of plug-ins and
-                extensions. The standard edition of eclipse comes with java and
-                plugin development tooling. There is even plenty of other
-                packages to choose from that includes tools for charting,
-                modeling, reporting, testing and building GUIs. The Eclipse
-                Marketplace Client gives users access to a treasure trove of
-                plugins and information supplied by an expanding community of
-                developers. Before the introduction of Android, Studio Eclipse
-                was used for developing android apps as it was considered best
-                for Java environment Development
-              </p>
-              <p>
-                <span>Languages Supported</span>: C, C++, Java, Perl, PHP,
-                Python, Ruby and more
-              </p>
-              <p>
-                <span> Some key features</span>: Best Support for latest Java
-                technologies Smart code completion Tooling options for JEE
-                projects Productivity Boosters Developer ergonomics Git
-                integration JUnit integration Task-focused interface including
-                system-tray notifications Cross platform Support Rich set of
-                community provided plugins
-              </p>
-              <p>
-                <span> Drawbacks</span>: While Eclipse is very versatile
-                software, the many options may be intimidating to newcomers.
-                Eclipse doesnâ??t have all of the same features as IntelliJ
-                IDEA, but it is open source.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>4. ECLIPSE</h3>
+                <p>
+                  <a href="https://www.eclipse.org/ide/">Eclipse</a> is another
+                  popular Java integrated development environment. It is a
+                  cross-platform,supports Microsoft windows, Linux , solaris and
+                  many more, and it also supports Java Programs and other
+                  plugins are also available like Eclipse IDE for Python
+                  Programming, Eclipse IDE for parallel Programming, Eclipse IDE
+                  for php Programming etc.This IDE has a lot of features for the
+                  development for java-based applications.
+                </p>
+                <p>
+                  <span>Languages Supported</span>: C, C++, Java, Perl, PHP,
+                  Python, Ruby and more.
+                </p>
+                <p>
+                  <span> Some key features</span>: For this IDE the software
+                  update system is very simple and can easily add plug-ins. This
+                  platform suppports to edit XML files .web service development
+                  and JPA tooling. It also supports spring-based applications
+                  Automatic Error Reporting Has interfaces to third-party
+                  solvers
+                </p>
+                <p>
+                  <span> Drawbacks</span>: It runs slow than NetBeans and other
+                  IDEs and have insufficient memory allocation. It helps to view
+                  the modules separately.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-5 row">
-            <div class="col-sm-12">
-              <h3>5. Code:: Blocks</h3>
-              <a href="https://www.codeblocks.org/"> Code:: Blocks </a> is
-              another popular free and open source option. It is a highly
-              customizable IDE that performs consistently across all platforms,
-              so it is great for developers who frequently switch between
-              workspaces. The plug-in framework lets users tweak this IDE to
-              meet their needs. Built around a plugin framework, Code:: Blocks
-              can be extended with plugins. Any kind of functionality can be
-              added by installing/coding a plugin. For instance, compiling and
-              debugging functionality is already provided by plugins!
-              <p><span>Languages Supported</span>: C, C++, Fortran</p>
-              <p>
-                <span>Some key features</span>: Compatible with Linux, Mac, and
-                Windows Smart code completion Easy to navigate tabbed interface
-                Customizable external tools Support for parallel builds Supports
-                many prebuilt and custom built plug-ins Integrated intelligent
-                Syntax highlighting JUnit integration Task-focused interface
-                including system-tray notifications Cross platform Support Rich
-                set of community provided plugins
-              </p>
-              <p>
-                <span>Drawbacks</span>: Though Code::Blocks comes with many
-                features, it is a relatively lightweight IDE, so itâ??s not
-                suited for larger projects. It is a great tool for beginners,
-                but advanced coders may be frustrated with the limitations.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>5. Code:: Blocks</h3>
+                <a href="https://www.codeblocks.org/"> Code:: Blocks </a> is a
+                free,cross-platform IDE. It is development environment for C and
+                C++ applications also, it was written in C++. Code block is
+                integrated with variety of software tools like it has
+                editor,compiler, debugger and many other software tools
+                essential for creating an C or C++ applications. Using the
+                in-bulit editor we can edit c and c++ programs easily with the
+                help of compiler we can compile,build and run our code ,with the
+                help of debugger we can debug the code easily
+                <p><span>Languages Supported</span>: C, C++, Fortran</p>
+                <p>
+                  <span>Some key features</span>: Debugger Code completion Smart
+                  indent Syntax Highlighting Multiple compilers Multi-target
+                  Project
+                </p>
+                <p>
+                  <span>Drawbacks</span>: Although this IDE allows many
+                  features, setting the environment is difficult for beginners
+                  especially when using it for C/C++.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-6 row">
-            <div class="col-sm-12">
-              <h3>6. Pycharm Developed at JetBrains</h3>
-              <p>
-                <a href="https://www.jetbrains.com/pycharm/">Pycharm </a> is an
-                IDE mostly used by Python programmers, with an ever going
-                interest of Python language in programmers, Pycharm popularity
-                is increasing exponentially, as it provides many premium
-                features for Python. It has a free community edition which is
-                released under Apache license and also a professional license
-                which is released under a proprietary license.
-              </p>
-              <p>
-                <span>Languages Supported</span>: AngularJS, Coffee Script, CSS,
-                Cython, HTML, JavaScript, Node.js, Python, TypeScript and
-                template languages
-              </p>
-              <p>
-                <span>Some key features</span>: Compatible with Linux, Mac, and
-                Windows Smart code completion Super Intelligent Python
-                assistance Offers great frameworks for modern web development
-                Comes with Interactive console Supports anaconda and many more
-                Scientific packages including matplotlib and Numpy Integrated
-                intelligent Syntax highlighting Supports cross technology
-                Development Remote Development capabilities Cross platform
-                Support Rich set of community provided plugins
-              </p>
-              <p>
-                <span>Drawbacks</span>: Users complain that PyCharm has some
-                bugs, such as the autocomplete feature occasionally not working,
-                which can be a minor inconvenience.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>6. Pycharm Developed at JetBrains</h3>
+                <p>
+                  <a href="https://www.jetbrains.com/pycharm/">Pycharm </a>
+                  PyCharm is an widely used integrated development environment
+                  in computer programming. It is a devoted Pyhton Integrated
+                  Development Environment allowing a wide range of vital tools
+                  for Python developers. PyCharm popularity is increasing
+                  exponentially, as it provides highly integrated and
+                  appropriate environment for beneficial Python code, Web
+                  development, Data Science, Deep learning and to visualize the
+                  data. PyCharm is developed in Java, Python by JetBrains and
+                  also supported by operating systems like Windows macOS, Linux.
+                </p>
+                <p>
+                  <span>Languages Supported</span>: AngularJS, Coffee Script,
+                  CSS, Cython, HTML, JavaScript, Node.js, Python, TypeScript and
+                  template languages.
+                </p>
+                <p>
+                  <span>Some key features</span>: Supports Linux, Mac, and
+                  Windows Smart code completion Super Intelligent Python
+                  assistance Offers great frameworks for modern web development
+                  Comes with Interactive console Allows anaconda and many other
+                  Scientific packages including matplotlib and Numpy Integrated
+                  intelligent Syntax highlighting Supports cross technology
+                  Development Rich set of community provided Plugins
+                </p>
+                <p>
+                  <span>Drawbacks</span>: It uses more storage/memory than any
+                  other text editors which reduce the functionality of code.
+                  PyCharm's professional version is somewhat expensive.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-7 row">
-            <div class="col-sm-12">
-              <h3>7. Aptana Studio 3</h3>
-              <p>
-                <a href="http://www.aptana.com/">Aptana Studio 3</a>
-                It is the professional, open source development tool for the
-                open web, Perhaps the most powerful of the open source IDEs,
-                Aptana Studio 3 (click here) is a massive improvement over its
-                predecessors. Since Aptana Studio 3 supports most browser specs,
-                compatibility challenges are minimal, so users can quickly
-                develop, test and deploy web apps from this single IDE.
-              </p>
-              <p>
-                <span> Languages Supported</span>: HTML5, CSS3, JavaScript,
-                Ruby, Rails, PHP, and Python
-              </p>
-              <p>
-                <span>Some key features</span>: HTML, CSS and JavaScript code
-                assist Deployment wizard Integrated Debuggers for Ruby for Rails
-                and JavaScript Git Integration User-friendly full IDE
-                customization Integrated intelligent Syntax highlighting Rich
-                set of community provided Plugins
-              </p>
-              <p>
-                <span> Drawbacks</span>: Although Aptana works well for students
-                juggling multiple small projects, it has stability issues and
-                runs slowly, so professional developers might prefer a more
-                powerful IDE.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>7. Aptana Studio 3</h3>
+                <p>
+                  <a href="http://www.aptana.com/">Aptana Studio 3</a>
+                  Aptana Studio is an open-source free integrated development
+                  environment(IDE) for building beneficial web applications.
+                  Depending on Eclipse, it allows JavaScript, HTML, CSS with
+                  outlining, JavaScript removing errors, error warning
+                  notifications and incorporated documentation. The platform
+                  uses and equipped the flexibility of this development
+                  environment and gives into a powerful development engine.
+                  Developers who need to build websites written in PHP, Ruby on
+                  Rails, can still use this IDE by adding plug-ins.
+                </p>
+                <p>
+                  <span> Languages Supported</span>: HTML5, CSS3, JavaScript,
+                  Ruby, Rails, PHP, and Python
+                </p>
+                <p>
+                  <span>Some key features</span>: HTML, CSS and JavaScript code
+                  assist Deployment wizard Integrated Debuggers for Ruby for
+                  Rails and JavaScript Git Integration User-friendly full IDE
+                  customization Integrated intelligent Syntax highlighting Rich
+                  set of community provided Plugins
+                </p>
+                <p>
+                  <span> Drawbacks</span>: Though Aptana works well for students
+                  reorganizing multiple small projects, it has some stability
+                  issues and runs slowly, therefore, the professional developers
+                  may prefer a more powerful IDE.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-8 row">
-            <div class="col-sm-12">
-              <h3>8. Xcode</h3>
-              <p>
-                <a href="https://developer.apple.com/xcode/">Xcode </a>
-                is an integrated development environment (IDE) for macOS
-                containing a suite of software development tools developed by
-                Apple for developing software for macOS, iOS, watchOS, and tvOS.
-                It is free, open-source, and part of Xcode, which is a
-                collection of tools for making apps for Apple devices such as
-                the iPad, iPhone, and Mac. Registered developers can download
-                preview releases and prior versions of the suite through the
-                Apple Developer website. Integration with Cocoa Touch makes
-                development in the Apple environment a breeze, and you can
-                enable services such as Game Center or Passbook with a single
-                mouse click. Built-in communication with the developerâ??s
-                website helps users produce fully functioning apps on the fly.
-              </p>
-              <p>
-                <span> Languages Supported</span>: AppleScript, C, C++, Java,
-                Objective-C, Swift
-              </p>
-              <p>
-                <span>Some key features</span>: Automatically builds, analyzes,
-                tests, and archives projects thanks to Integration with OX X
-                server Smart code completion Jump bar permits quick navigation
-                Workflow is highly customizable with Tabs, Behaviors, and
-                Snippets Comes with Interactive console Single button to capture
-                a complete representation of the current OpenGL frame Integrated
-                intelligent Syntax highlighting With the iOS SDK, Xcode can
-                build, install, run, and debug Cocoa Touch apps in a Mac-based
-                Simulator
-              </p>
-              <p>
-                <span>Drawbacks</span>: You obviously need an Apple machine to
-                run Xcode, and keep in mind that you need a developers license
-                to upload apps to the Apple Store.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>8. Xcode</h3>
+                <p>
+                  <a href="https://developer.apple.com/xcode/">Xcode </a>
+                  is an Apple's integrated development environment (IDE) which
+                  contains a suitable software development tools to buid
+                  software for macOS, iOS, watchOS, and tvOS. It is free,
+                  open-source, and part of Xcode, which is a collection of tools
+                  for making apps for Apple devices such as the iPad, iPhone,
+                  and Mac. The signed developers can download preliminary
+                  viewing releases and earlier versions of the group through the
+                  Apple Developer website. Xcode allows tools to control all our
+                  entire development workflow - from creating the app, to
+                  testing, optimizing, and presenting it to the App Store.
+                </p>
+                <p>
+                  <span> Languages Supported</span>: AppleScript, C, C++, Java,
+                  Objective-C, Swift
+                </p>
+                <p>
+                  <span>Some key features</span>: Version Editor Testing Quick
+                  Access Graphical Debugger Interface Builder Built-in Single
+                  button to capture a complete representation of the current
+                  OpenGL frame Jump bar permits quick navigation With the iOS
+                  SDK, Xcode can build, install, run, and debug Cocoa Touch apps
+                  in a Mac-based Simulator
+                </p>
+                <p>
+                  <span>Drawbacks</span>: We absolutely require an Apple device
+                  to use and run code in Xcode since, it supports only macOS and
+                  remember that we will have to need a developer's license to
+                  upload apps to the Apple Store.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-9 row">
-            <div class="col-sm-12">
-              <h3>9. Komodo</h3>
-              <p>
-                <a href="https://www.activestate.com/products/komodo-ide/">
-                  Komodo IDE
-                </a>
-                is an integrated development environment (IDE) for dynamic
-                programming languages. It was introduced in May 2000. Many of
-                Komodoâ??s features are derived from an embedded Python
-                interpreter. It has an open-source counterpart known as Komodo
-                edit. Both Komodo Edit and IDE support user customizing via
-                plug-ins and macros. Komodo plug-ins are based on Mozilla
-                Add-ons and extensions can be searched for, downloaded,
-                configured, installed and updated from within the application.
-              </p>
-              <p>
-                <span>Languages Supported</span>: CSS, Go, JavaScript, HTML,
-                NodeJS, Perl, PHP, Python, Ruby, Tcl and more.
-              </p>
-              <p>
-                <span>Some key features</span> : Powerful editor with
-                autocomplete, refactoring and other smart features Visual
-                debugger and more to debug, inspect and test your code Support
-                for Git, Mercurial, Subversion, CVS, Perforce and Bazaar Tons of
-                add-ons for customizing and extending features Great tools for
-                pair programming and collaboration Define your own workflow with
-                easy file and project navigation Integrated intelligent Syntax
-                highlighting Backed by ActiveState, trusted by developers and
-                enterprises Split View and multi-window Support Quickly place
-                numeric bookmarks and go to them Type an abbreviation to
-                automatically trigger snippet selection
-              </p>
-              <p>
-                <span>Drawbacks</span>: One of the few complaints about Komodo
-                is that the free version doesnâ??t enable all of the features,
-                but the premium version is still considered well-worth the cost.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>9. Komodo</h3>
+                <p>
+                  <a href="https://www.activestate.com/products/komodo-ide/">
+                    Komodo IDE
+                  </a>
+                  is an integrated development environment (IDE) for dynamic
+                  programming languages and was discovered in May 2000. Komodo
+                  was written in C++, C, XUL, Perl, Python which is developed by
+                  ActiveState. Supported by Winndows 7 or later versions, Red
+                  Hat Enterprise Linux 5 or later versions and by many more
+                  other OS's. Komodo is full with features that are derived from
+                  an embedded Python interpreter. Also supports the major Web
+                  technologies like HTML5, CSS, JavaScript, Flask and many more.
+                  It has an open-source counterpart known as Komodo edit. Both
+                  the Komodo Edit and IDE supports user customizing via plug-ins
+                  and macros. Komodo plug-ins are based on Mozilla Add-ons and
+                  extensions can be searched for, downloaded, configured,
+                  installed and updated from within the application.
+                </p>
+                <p>
+                  <span>Languages Supported</span>: CSS, Go, JavaScript, HTML,
+                  NodeJS, Perl, PHP, Python, Ruby, Tcl and more..
+                </p>
+                <p>
+                  <span>Some key features</span> : Advanced Editor It has it's
+                  own Code Intelligence Allows third Party Library Support
+                  Graphical, Multithreading Debugging It is built on DBGp
+                  Protocol Split View and multi-window Support Integrated Unit
+                  Testing Package manager Integration Workflow and File
+                  Management
+                </p>
+                <p>
+                  <span>Drawbacks</span>: Though komodo is a great IDE with
+                  advanced features like multiple integrations and frameworks,
+                  however getting this personal feature-set license is
+                  expensive.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="content content-10 row">
-            <div class="col-sm-12">
-              <h3>10. RubyMine</h3>
-              <p>
-                <a href="https://www.jetbrains.com/ruby/">RubyMine</a> is
-                another superb IDE by JetBrains that offers a 30-day free trial
-                and costs $687 annually. As its name implies, RubyMine is a
-                favorite among Ruby enthusiasts; however, this IDE supports
-                other programming languages as well. Easy navigation, logical
-                workflow organization, and compatibility with most platforms
-                make RubyMine a workplace favorite.
-              </p>
-              <p>
-                <span>Languages Supported </span>: CoffeeScript, CSS, HAML,
-                HTML, JavaScript, LESS, Ruby and Rails, Ruby and SASS.
-              </p>
-              <p>
-                <span>Some key features</span>: Powerful editor with
-                autocomplete, refactoring and other smart features Visual
-                debugger and more to debug, inspect and test your code Support
-                for Git, Mercurial, Subversion, CVS, Perforce and Bazaar Tons of
-                add-ons for customizing and extending features Bundled keyboard
-                schemes Rails Model Diagram Integrated intelligent Syntax
-                highlighting Split View and multi-window Support Ruby motion
-                allows for the iOS development
-              </p>
-              <p>
-                <span>Drawbacks</span>: Your machine needs at least 4GB of RAM
-                for RubyMine to run smoothly. Some users also complain about the
-                lack of GUI customization options, also non-availability of
-                standard edition is an issue.
-              </p>
+            <div class="">
+              <div class="content">
+                <h3>10. RubyMine</h3>
+                <p>
+                  <a href="https://www.jetbrains.com/ruby/">RubyMine</a> is
+                  Integrated Development Environment(IDE) which is developed by
+                  JetBrains and built using Java, Kotlin. RubyMine IDE provides
+                  a high range of required tools for developers, higly
+                  integrated to build a efficient environment for fruitful Ruby
+                  development and Web development with Ruby on Rails. As it's
+                  name suggests, RubyMine is a favorite IDE among Ruby
+                  developers. However, it supports other programming languages
+                  as well. It offers a 30-day free trial and later costs $687
+                  annually. Through a powerful testing and debugging UI, working
+                  with simulator or device, it is much easier to fine-tune your
+                  application code. RubyMine is the best IDE fro RoR
+                  development.
+                </p>
+                <p>
+                  <span>Languages Supported </span>: CoffeeScript, CSS, HAML,
+                  HTML, JavaScript, LESS, Ruby and Rails, Ruby and SASS.
+                </p>
+                <p>
+                  <span>Some key features</span>: Smart Code Completion Code
+                  styling and formatting Search and Navigation Ruby motion
+                  allows for the iOS developmen Ruby in Rails and it's Tools
+                  GUI-based test runner Remote Debugging Third-Party Tool
+                  Integration Split View and multi-window Support
+                </p>
+                <p>
+                  <span>Drawbacks</span>: Our device requires at least 4GB of
+                  RAM for RubyMine in order to run smoothly. Some developers
+                  complain about the lack of GUI customization options, also
+                  unavailability of standard edition is an issue.
+                </p>
+              </div>
             </div>
+            <fieldset>
+              <legend>NOTE</legend>
+              <p class="text-warning">
+                These were some of the best IDE according to me but if you find
+                your favorite IDE missing do mention them by contacting us feel
+                free to contact
+              </p>
+            </fieldset>
           </div>
         </div>
       </div>
+      <div class="addSection">
+        <div class="adds">
+          <img
+            src="https://tpc.googlesyndication.com/simgad/15555188718693592081?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qmfS7hVqWSTJk_Yd01VTbY-M-9yYA"
+            alt=""
+          />
+        </div>
+
+        <div class="adds">
+          <div class="addHeading">WHAT'S NEW</div>
+          <div class="add">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210115220210/prethumb_min.png"
+              alt=""
+            />
+            <span>Ad free experience with TechSnap Premium</span>
+          </div>
+          <div class="add">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210203145720/DSA-SP_1-min.png"
+              alt=""
+            />
+            <span>DSA Self Placed course</span>
+          </div>
+          <div class="add">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210609101834/GC-LIve-Icon-1.png"
+              alt=""
+            />
+            <span>Choose Best IDE for Programming</span>
+          </div>
+        </div>
+        <div class="adds">
+          <div class="addHeading">Written Work</div>
+          <div class="addText">
+            <div>Lorem, dolor consectetur adipisicing elit. Repudiandae?</div>
+            <div>
+              Lorem amet consectetur. Tempore corporis tenetur accusantium
+              temporibus.
+            </div>
+            <div>Lorem ipsum dolor sit ametr adipisicing elit.</div>
+            <div>Lorem ipsum dolor sit amet, consectet urelit.</div>
+          </div>
+        </div>
+        <div class="lastAdd adds">
+          <img
+            src="https://tpc.googlesyndication.com/simgad/16326905167274029106?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkzr_uqV4wU52rAjHMXq88Fkbfg_g"
+            alt=""
+          />
+        </div>
+      </div>
     </main>
-    <div class="container-sm">
-      <p class="text-warning">
-        These were some of the best IDE according to me but if you find your
-        favorite IDE missing do mention them by contacting us feel free to
-        contact
-      </p>
-    </div>
-    <footer class="bg-secondary p-2">
-      <ul class="social container-sm">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Linkidin</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
